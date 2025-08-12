@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>One Song Consulting | AI Training & Biomedical Evaluation</title>
+  <style>
+    :root {
+      --ink: #1a1f24;
+      --muted: #5b6a72;
+      --brand: #0e7c86;
+      --bg: #f7f9fb;
+      --card: #ffffff;
+      --ring: rgba(14,124,134,0.15);
+      --maxw: 1100px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.55;
+      text-rendering: optimizeLegibility;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(255,255,255,0.8); backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e7edf1;
+    }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 60px;
+    }
+    .brand { font-weight: 700; letter-spacing: .2px; }
+    .links { display: flex; gap: 16px; font-size: 0.95rem; color: var(--muted); }
+    .hero {
+      position: relative;
+      min-height: 56vh;
+      display: grid; place-items: center;
+      text-align: center;
+      color: #f8f9fa;
+      background-image: url('./images/hero.png');
+      background-size: cover; background-position: center;
+      border-bottom: 1px solid #e7edf1;
+    }
+    .hero::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0.28);
+    }
+    .hero-inner {
+      position: relative; z-index: 1;
+      padding: 80px 20px;
+      text-shadow: 0 1px 3px rgba(0,0,0,.6);
+    }
+    .hero h1 { font-size: clamp(28px, 5vw, 44px); margin: 0 0 10px 0; }
+    .hero p { margin: 0; font-size: clamp(16px, 2.5vw, 20px); opacity: .95; }
+    section { padding: 56px 0; }
+    h2 { font-size: 24px; margin: 0 0 18px 0; }
+    .lead { color: var(--muted); max-width: 80ch; }
+    .grid {
+      display: grid; gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      margin-top: 18px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid #e7edf1; border-radius: 14px;
+      padding: 18px;
+      box-shadow: 0 1px 0 rgba(16,24,40,0.02);
+    }
+    .card h3 { margin: 0 0 8px 0; font-size: 16px; }
+    .card p { margin: 0; color: var(--muted); }
+    .contact-box {
+      background: var(--card);
+      border: 1px solid #e7edf1; border-radius: 14px;
+      padding: 20px;
+    }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    footer {
+      padding: 28px 0; color: var(--muted); font-size: 0.95rem;
+      border-top: 1px solid #e7edf1; text-align: center;
+    }
+    :focus-visible {
+      outline: 3px solid var(--ring);
+      outline-offset: 2px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">One Song Consulting</div>
+      <nav class="links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <section class="hero" role="img" aria-label="Abstract blue and green background">
+    <div class="hero-inner container">
+      <h1>AI Training and Biomedical Evaluation</h1>
+      <p>Evaluation, dataset design, and mechanistic biology test sets for modern LLMs.</p>
+    </div>
+  </section>
+  <main class="container">
+    <section id="about">
+      <h2>About</h2>
+      <p class="lead">
+        One Song Consulting designs rigorous evaluation for scientific language models. Work spans model audits,
+        biosafety guardrail testing, and construction of high-fidelity mechanistic reasoning sets across immunology,
+        glycobiology, and neuroscience.
+      </p>
+    </section>
+    <section id="services">
+      <h2>Services</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Model Evaluation</h3>
+          <p>Domain-specific test design, reliability checks, and error analysis for biology tasks.</p>
+        </div>
+        <div class="card">
+          <h3>Dataset Design</h3>
+          <p>JSON/JSONL-ready curation and annotation for training and benchmarking.</p>
+        </div>
+        <div class="card">
+          <h3>Mechanistic Test Sets</h3>
+          <p>PhD-level questions and rubrics to probe causal reasoning rather than recall.</p>
+        </div>
+        <div class="card">
+          <h3>Biosafety Guardrails</h3>
+          <p>Red-teaming for misuse vectors in wet-lab and sequence-to-function contexts.</p>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio">
+      <h2>Portfolio</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>LLM Biology Benchmark</h3>
+          <p>200+ expert questions spanning molecular biology and immunology with graded keys.</p>
+        </div>
+        <div class="card">
+          <h3>Mechanistic Rubrics</h3>
+          <p>Scoring guides that weight causal steps and penalize answer leakage.</p>
+        </div>
+        <div class="card">
+          <h3>Guardrail Testing</h3>
+          <p>Adversarial prompts and evaluations focused on biosafety-relevant outputs.</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-box">
+        <p>Email: <span class="mono">onesongconsulting@gmail.com</span></p>
+      </div>
+    </section>
+  </main>
+  <footer>
+    © 2025 One Song Consulting. All rights reserved.
+  </footer>
+</body>
+</html>
